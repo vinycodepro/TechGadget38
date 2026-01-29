@@ -5,6 +5,9 @@ import dotenv from 'dotenv';
 import productRoutes from './routes/products.js';
 import authRoutes from './routes/auth.js';
 import orderRoutes from './routes/orders.js';
+import dns from 'dns';
+
+dns.setServers(['8.8.8.8', '1.1.1.1'])
 
 dotenv.config();
 
