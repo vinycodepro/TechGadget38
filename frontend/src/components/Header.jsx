@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = ({ setCurrentPage, cartItemsCount, openCart }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,14 +22,12 @@ const Header = ({ setCurrentPage, cartItemsCount, openCart }) => {
         </button>
         
         <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-          <li><a href="#home" onClick={() => handleNavClick('home')}>Home</a></li>
-          <li><a href="#products" onClick={() => handleNavClick('products')}>Products</a></li>
-          <li><a href="#about" onClick={() => handleNavClick('about')}>About</a></li>
-          <li>
-            <button className="cart-icon" onClick={openCart}>
-              🛒 Cart ({cartItemsCount})
-            </button>
-          </li>
+         <Link to="/" onClick={() => handleNavClick('home')}>Home</Link>
+          <Link to="/products" onClick={() => handleNavClick('products')}>Products</Link>
+          <Link to="/about" onClick={() => handleNavClick('about')}>About</Link>
+          <Link to="/login" onClick={() => handleNavClick('login')}>Login</Link>
+          <Link to="/register" onClick={() => handleNavClick('register')}>Register</Link>
+
         </ul>
 
 

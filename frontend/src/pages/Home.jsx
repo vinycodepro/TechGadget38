@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <>
-      <section className="hero">
+      <section className="hero h-16 w-16 bg-red-500 border-4 border-black m-4">
         <h1>Welcome to TechGadget</h1>
         <p>Discover the latest and greatest in electronics technology</p>
         <button className="cta-button">Shop Now</button>
